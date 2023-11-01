@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ririn Sayang <3</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Dear My Love Ririn <3</strong>
+                        <p>
+                            Im so grateful to have you in my life, you really change my life.
+                            Thanks to you Im no longer have serious anxiety. Thanks to you,
+                            I can control my anxiety now. Thanks sayang <3 I love you so much.
+                            Im here for you always and I always be there for you. I always love
+                            you my love <3
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <button id="playButton">Click Me</button>
+
+      <!-- Add the audio element without controls and set to autoplay -->
+      <audio id="audioPlayer" autoplay loop>
+          <source src="you&i.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+      </audio>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+        const playButton = document.getElementById('playButton');
+        const audioPlayer = document.getElementById('audioPlayer');
+
+        playButton.addEventListener('click', () => {
+            audioPlayer.play();
+            playButton.style.display = 'none'; // Hide the button after playing
+        });
+    </script>
+</body>
+</html>
